@@ -5,6 +5,7 @@
     Button:
         background_normal: ''
         background_color: [10, 100, 205, 0.5]
+        on_release: root.item_label.set_text("YES pressed")
         Image:
             source: './images/yes.png'
             x: self.parent.x
@@ -12,6 +13,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("LEFT ARROW pressed")
         Image:
             source: './images/larrow.png'
             x: self.parent.x
@@ -19,6 +21,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("RIGHT ARROW pressed")
         Image:
             source: './images/rarrow.png'
             x: self.parent.x
@@ -26,6 +29,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("NO pressed")
         background_normal: ''
         background_color: [10, 100, 205, 0.3]
         Image:
@@ -35,6 +39,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("DOWN ARROW pressed")
         Image:
             source: './images/darrow.png'
             x: self.parent.x
@@ -42,6 +47,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("UP ARROW pressed")
         Image:
             source: './images/uarrow.png'
             x: self.parent.x
@@ -49,6 +55,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("BOOK pressed")
         background_normal: ''
         background_color: [200, 200, 105, 0.5]
         Image:
@@ -58,6 +65,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("SWORD pressed")
         background_normal: ''
         background_color: [0, 300, 255, 5]
         Image:
@@ -67,6 +75,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("BAG pressed")
         background_normal: ''
         background_color: [0, 0, 255, 5]
         Image:
@@ -76,6 +85,7 @@
             size: self.parent.width, self.parent.height
             allow_stretch: True
     Button:
+        on_release: root.item_label.set_text("USE pressed")
         background_normal: ''
         background_color: [0, 180, 90, 0.5]
         Image:
@@ -87,6 +97,7 @@
     Button:
         background_normal: ''
         background_color: [300, 0, 255, 5]
+        on_release: root.item_label.set_text("SHIELD pressed")
         Image:
             source: './images/shield.png'
             x: self.parent.x
@@ -95,6 +106,7 @@
             allow_stretch: True
     Button:
         background_color: (162, 31, 3, 1)
+        on_release: root.item_label.set_text("MAP pressed")
         Image:
             source: './images/map.png'
             x: self.parent.x
