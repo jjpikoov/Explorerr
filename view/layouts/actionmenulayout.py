@@ -1,6 +1,7 @@
 from kivy.uix.gridlayout import GridLayout
 from kivy.lang import Builder
-from plyer.facades.vibrator import Vibrator
+# from jnius import autoclass
+import jnius
 
 
 class ActionMenuLayout(GridLayout):
@@ -10,10 +11,19 @@ class ActionMenuLayout(GridLayout):
     def set_label(self, label):
         self.item_label = label
 
+#    def vibrate(self, seconds):
+#        try:
+#            self.vibrator = Vibrator()
+#            self.vibrator.vibrate(seconds)
+#        except NotImplementedError:
+#            print "(Explorerr): Vibration not avaiable, are you on computer?"
+
     def vibrate(self, seconds):
-        vibrator = Vibrator()
         try:
+            PythonActivity = jnius.autoclass('org.renpy.android.PythonActivity')
+            Context = jnius.autoclass('android.content.Context')
+            activity = PythonActivity.mActivity
+            vibrator = activity.getSystemService(Context.VIBRATOR_SERVICE)
             vibrator.vibrate(seconds)
-        except NotImplementedError:
-            print "I can't vibrate, are you on computer?"
-    pass
+        except jnius.JavaException:
+                print("(Explorerr): Vibration not avaiable, are you on computer?")
