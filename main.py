@@ -1,12 +1,13 @@
 from kivy.app import App
-from view.layouts.twohorizontallayout import TwoHorizontalLayout
+from view.layouts.layouts import MainLayout
 
 
 class ExplorerrApp(App):
     """Starting class"""
     def build(self):
         """This stuff will be run"""
-        return TwoHorizontalLayout()
+        ml = MainLayout()
+        return ml.return_layout()
 
 if __name__ == '__main__':
     ExplorerrApp().run()

@@ -11,12 +11,6 @@ class ActionMenuLayout(GridLayout):
     def set_label(self, label):
         self.item_label = label
 
-#    def vibrate(self, seconds):
-#        try:
-#            self.vibrator = Vibrator()
-#            self.vibrator.vibrate(seconds)
-#        except NotImplementedError:
-#            print "(Explorerr): Vibration not avaiable, are you on computer?"
 
     def vibrate(self, seconds):
         try:
